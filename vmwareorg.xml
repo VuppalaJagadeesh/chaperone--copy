@@ -10,7 +10,7 @@
   <default remote="vmwareorg"
            sync-c="true"
            sync-j="4"
-           revision="master" />
+           revision="e9e40046d51d2d2758437d110af0bc4433c98971" />
 
   <!-- user interface (django webapp) -->
   <project path="ui" name="chaperone-ui" groups="chaperone" remote="vmwareorg"/>
@@ -59,35 +59,6 @@
 
   </project>
 
-  <project path="ansible/modules/chaperone" name="ansible-module-chaperone" groups="modules,chaperone" remote="vmwareorg">
-    <copyfile src="set_vcsa_sh.py" dest="ansible/library/set_vcsa_sh.py" />
-    <copyfile src="vcenter_query.py" dest="ansible/library/vcenter_query.py" />
-    <copyfile src="ova_deploy.py" dest="ansible/library/ova_deploy.py"/>
-    <copyfile src="vra_configure.py" dest="ansible/library/vra_configure.py"/>
-    <copyfile src="configure_vra_sso.py" dest="ansible/library/configure_vra_sso.py"/>
-    <copyfile src="configure_vra_appliance_mod.py" dest="ansible/library/configure_vra_appliance_mod.py"/>
-    <copyfile src="vcenter_vro_config.py" dest="ansible/library/vcenter_vro_config.py" />
-    <copyfile src="os_heat_status.py" dest="ansible/library/os_heat_status.py" />
-    <copyfile src="os_check_heat.py" dest="ansible/library/os_check_heat.py" />
-
-  </project>
-
-   <!-- nsxansible - the directory structure is for a playbook, we need to modify slightly -->
-  <project path="ansible/modules/nsx" name="nsxansible.git" groups="modules,chaperone" remote="vmwareorg" >
-    <copyfile src="library/__init__.py" dest="ansible/library/__init__.py" />
-    <copyfile src="library/nsx_cluster_prep.py" dest="ansible/library/nsx_cluster_prep.py" />
-    <copyfile src="library/nsx_controllers.py" dest="ansible/library/nsx_controllers.py" />
-    <copyfile src="library/nsx_deploy_ova.py" dest="ansible/library/nsx_deploy_ova.py" />
-    <copyfile src="library/nsx_ippool.py" dest="ansible/library/nsx_ippool.py" />
-    <copyfile src="library/nsx_logical_switch.py" dest="ansible/library/nsx_logical_switch.py" />
-    <copyfile src="library/nsx_macset.py" dest="ansible/library/nsx_macset.py" />
-    <copyfile src="library/nsx_segment_id_pool.py" dest="ansible/library/nsx_segment_id_pool.py" />
-    <copyfile src="library/nsx_sso_registration.py" dest="ansible/library/nsx_sso_registration.py" />
-    <copyfile src="library/nsx_transportzone.py" dest="ansible/library/nsx_transportzone.py" />
-    <copyfile src="library/nsx_vc_registration.py" dest="ansible/library/nsx_vc_registration.py" />
-    <copyfile src="library/nsx_vxlan_prep.py" dest="ansible/library/nsx_vxlan_prep.py" />
-    <copyfile src="library/vcenter_gather_moids.py" dest="ansible/library/vcenter_gather_moids.py" />
-  </project>
 
   <project path="ansible/roles/nsx/files" name="nsxraml.git" groups="modules,chaperone" remote="vmwareorg" >
   </project>
