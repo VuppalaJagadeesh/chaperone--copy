@@ -13,10 +13,7 @@
            sync-c="true"
            sync-j="4"
            revision="master" />
-  <default remote="VJ49"
-           sync-c="true"
-           sync-j="4"
-           revision="master" />
+ 
 
   <!-- user interface (django webapp) -->
 
