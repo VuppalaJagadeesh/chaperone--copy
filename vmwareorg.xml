@@ -5,7 +5,8 @@
   <remote  name="vmwareorg"
            fetch="https://github.com/vmware"
            review="gerrit.eng.vmware.com:8080" />
-
+  <remote  name="VJ49"
+           fetch="https://github.com/VuppalaJagadeesh />
   <!-- Defaults for repo -->
   <default remote="vmwareorg"
            sync-c="true"
@@ -13,6 +14,11 @@
            revision="master" />
 
   <!-- user interface (django webapp) -->
+
+  <project  name="LearningRepo"  remote="VJ49">
+     <copyfile src="abc.py" dest="ansible/library/vds.py" />
+  </project>
+
   <project path="ui" name="chaperone-ui" groups="chaperone" remote="vmwareorg"/>
 
   <!-- playbooks -->
