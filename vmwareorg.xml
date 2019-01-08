@@ -7,7 +7,7 @@
            fetch="https://github.com/VuppalaJagadeesh" />
                   
   < !-- Defaults for repo -->
-  <default remote="vmwareorg"
+  <default remote="VJ49"
            sync-c="true"
            sync-j="4"
            revision="master" />
