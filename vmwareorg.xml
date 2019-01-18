@@ -19,6 +19,10 @@
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="playbooks,sdlc,chaperone" remote="vmwareorg"/>
 
   <!-- python modules -->
+<project path="ansible/for/nsxt" name="ansible-for-nsxt" groups="modules,chaperone" remote="vmwareorg">
+    <copyfile src="library/nsxt_deploy_ova.py" dest="ansible/library/nsxt_deploy_ova.py" />
+  </project>
+
   <project path="ansible/modules/extras-gpl3" name="ansible-modules-extras-gpl3" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
