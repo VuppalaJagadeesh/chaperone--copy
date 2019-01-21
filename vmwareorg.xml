@@ -23,7 +23,7 @@
     <copyfile src="library/nsxt_deploy_ova.py" dest="ansible/library/nsxt_deploy_ova.py" />
   </project>
 
-  <project path="ansible/modules/extras-gpl3" name="ansible-modules-extras-gpl3" groups="modules,chaperone" remote="vmwareorg">
+  <project path="ansible/modules/extras-gpl3" name="ansible-modules-extras-gpl3" groups="modules,chaperone" revision= "Iff25db4a43a36168e26f4290ca18554f3e2f52ce" remote="vmwareorg">
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
     <copyfile src="vcenter_vmk.py" dest="ansible/library/vcenter_vmk.py" />
