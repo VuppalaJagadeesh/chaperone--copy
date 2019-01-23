@@ -5,12 +5,19 @@
   <remote  name="vmwareorg"
            fetch="https://github.com/vmware"
            review="gerrit.eng.vmware.com:8080" />
+   <remote  name="privateorg"
+           fetch="https://github.com/VuppalaJagadeesh"
+           review="gerrit.eng.vmware.com:8080" /> 
 
   <!-- Defaults for repo -->
   <default remote="vmwareorg"
            sync-c="true"
            sync-j="4"
            revision="master" />
+  <defualt remote="privateorg"
+           sync-c="true"
+           sync-j="4"
+           revision="master"/>
 
   <!-- user interface (django webapp) -->
   <project path="ui" name="chaperone-ui" groups="chaperone" remote="vmwareorg"/>
@@ -19,7 +26,7 @@
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="playbooks,sdlc,chaperone" remote="vmwareorg"/>
 
   <!-- python modules -->
-<project path="ansible/modules/nsxt" name="AnsibleForNSX-T" groups="modules,chaperone" remote="vmwareorg">
+<project path="ansible/modules/nsxt" name="AnsibleForNSX-T" groups="modules,chaperone" remote="privateorg">
     <copyfile src="library/nsxt_deploy_ova.py" dest="ansible/library/nsxt_deploy_ova.py" />
     <copyfile src="library/nsxt_controllers.py" dest="ansible/library/nsxt_controllers.py" />
     <copyfile src="library/nsxt_edge_clusters.py" dest="ansible/library/nsxt_edge_clusters.py" />
