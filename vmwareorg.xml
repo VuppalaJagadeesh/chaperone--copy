@@ -43,10 +43,10 @@
     <copyfile src="library/nsxt_logical_switches.py" dest="ansible/library/nsxt_logical_switches.py" />
     <copyfile src="library/nsxt_logical_ports.py" dest="ansible/library/nsxt_logical_ports.py" />
     <copyfile src="library/nsxt_logical_routers.py" dest="ansible/library/nsxt_logical_routers.py" />
-  
     <copyfile src="library/nsxt_logical_router_ports.py" dest="ansible/library/nsxt_logical_router_ports.py" />
-    <copyfile src="library/nsxt_logical_ports.py" dest="ansible/library/nsxt_logical_ports.py" />
-    <copyfile src="library/nsxt_logical_routers.py" dest="ansible/library/nsxt_logical_routers.py" />
+    <copyfile src="library/nsxt_logical_router_static_routes.py" dest="ansible/library/nsxt_logical_router_static_routes.py" />
+    <copyfile src="library/nsxt_nat_rules.py" dest="ansible/library/nsxt_nat_rules.py" />
+    <copyfile src="library/nsxt_nat_rules.py" dest="ansible/library/nsxt_nat_rules.py" />
 
 
   </project>
