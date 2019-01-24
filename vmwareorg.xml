@@ -8,7 +8,7 @@
   <remote  name="privateorg"
            fetch="https://github.com/VuppalaJagadeesh"
            review="gerrit.eng.vmware.com:8080" />
-  <remote name="gitlaborg"
+  <remote  name="gitlaborg"
            fetch="https://gitlab.eng.vmware.com/pstools/"
            review="gerrit.eng.vmware.com:8080"  />
 
