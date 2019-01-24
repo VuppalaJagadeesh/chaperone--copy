@@ -31,20 +31,7 @@
 
   <!-- playbooks -->
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="playbooks,sdlc,chaperone" remote="vmwareorg"/>
-  
-  <project path="chaperone-pks " name="chaperone-pks" groups="modules,chaperone" remote="gitlaborg">
-    <copyfile src="library/get_nsx_manager_ca_cert.py" dest="ansible/library/get_nsx_manager_ca_cert.py" />
-    <copyfile src="library/get_nsx_manager_ids.py" dest="ansible/library/get_nsx_manager_ids.py" />
-    <copyfile src="library/ops_manager_configure_auth.py" dest="ansible/library/ops_manager_configure_auth.py" />
-    <copyfile src="library/ops_manager_configure_bosh.py" dest="ansible/library/ops_manager_configure_bosh.py" />
-    <copyfile src="library/ops_manager_deploy_ova.py" dest="ansible/library/ops_manager_deploy_ova.py" />
-    <copyfile src="library/ops_manager_deploy_pks.py" dest="ansible/library/ops_manager_deploy_pks.py" />
-    <copyfile src="library/ops_manager_generate_rsa.py" dest="ansible/library/ops_manager_generate_rsa.py" />
-    <copyfile src="library/ops_manager_nsxt_precheck_errand.py" dest="ansible/library/ops_manager_nsxt_precheck_errand.py" />
-    <copyfile src="library/ops_manager_stage_pks.py" dest="ansible/library/ops_manager_stage_pks.py" />
-    <copyfile src="library/ops_manager_upload_pks_stemcell.py" dest="ansible/library/ops_manager_upload_pks_stemcell.py" />
 
-  </project>
 
   <!-- python modules -->
   <project path="ansible/modules/nsxt" name="AnsibleForNSX-T" groups="modules,chaperone" remote="privateorg">
@@ -69,7 +56,20 @@
     <copyfile src="library/nsxt_nat_rules.py" dest="ansible/library/nsxt_nat_rules.py" />
 
   </project>
+  
+  <project path="chaperone-pks " name="chaperone-pks" groups="modules,chaperone" remote="gitlaborg">
+    <copyfile src="library/get_nsx_manager_ca_cert.py" dest="ansible/library/get_nsx_manager_ca_cert.py" />
+    <copyfile src="library/get_nsx_manager_ids.py" dest="ansible/library/get_nsx_manager_ids.py" />
+    <copyfile src="library/ops_manager_configure_auth.py" dest="ansible/library/ops_manager_configure_auth.py" />
+    <copyfile src="library/ops_manager_configure_bosh.py" dest="ansible/library/ops_manager_configure_bosh.py" />
+    <copyfile src="library/ops_manager_deploy_ova.py" dest="ansible/library/ops_manager_deploy_ova.py" />
+    <copyfile src="library/ops_manager_deploy_pks.py" dest="ansible/library/ops_manager_deploy_pks.py" />
+    <copyfile src="library/ops_manager_generate_rsa.py" dest="ansible/library/ops_manager_generate_rsa.py" />
+    <copyfile src="library/ops_manager_nsxt_precheck_errand.py" dest="ansible/library/ops_manager_nsxt_precheck_errand.py" />
+    <copyfile src="library/ops_manager_stage_pks.py" dest="ansible/library/ops_manager_stage_pks.py" />
+    <copyfile src="library/ops_manager_upload_pks_stemcell.py" dest="ansible/library/ops_manager_upload_pks_stemcell.py" />
 
+  </project>
   <project path="ansible/modules/extras-gpl3" name="ansible-modules-extras-gpl3" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
