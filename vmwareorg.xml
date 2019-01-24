@@ -9,7 +9,7 @@
            fetch="https://github.com/VuppalaJagadeesh"
            review="gerrit.eng.vmware.com:8080" />
   <remote name="gitlaborg"
-          fetch = "https://gitlab.eng.vmware.com/pstools"
+          fetch="https://gitlab.eng.vmware.com/pstools"
           review="gerrit.eng.vmware.com:8080"/>
 
   <!-- Defaults for repo -->
@@ -22,7 +22,7 @@
            sync-j="4"
            revision="master"/>
   <default remote="gitlaborg"
-           sync-c ="true"
+           sync-c="true"
            sync-j="4"
            revision="master"/>
 
@@ -32,7 +32,7 @@
   <!-- playbooks -->
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="playbooks,sdlc,chaperone" remote="vmwareorg"/>
   
-  <project path="PS Tools/chaperone-pks " name="chaperone-pks" groups="modules,chaperone" remote="gitlaborg">
+  <project path="chaperone-pks " name="chaperone-pks" groups="modules,chaperone" remote="gitlaborg">
     <copyfile src="library/get_nsx_manager_ca_cert.py" dest="ansible/library/get_nsx_manager_ca_cert.py" />
     <copyfile src="library/get_nsx_manager_ids.py" dest="ansible/library/get_nsx_manager_ids.py" />
     <copyfile src="library/ops_manager_configure_auth.py" dest="ansible/library/ops_manager_configure_auth.py" />
