@@ -9,7 +9,8 @@
            fetch="https://github.com/VuppalaJagadeesh"
            review="gerrit.eng.vmware.com:8080" />
   <remote name="gitlaborg"
-          fetch="https://gitlab.eng.vmware.com/pstools"/>
+          fetch="https://gitlab.eng.vmware.com/pstools/"
+          review="gerrit.eng.vmware.com:8080"/>
 
   <!-- Defaults for repo -->
   <default remote="vmwareorg"
