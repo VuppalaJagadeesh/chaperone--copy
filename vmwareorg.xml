@@ -57,7 +57,7 @@
 
   </project>
   
-  <project path="chaperone-pks " name="chaperone-pks" groups="modules,chaperone" remote="gitlaborg">
+  <project path="ansible/modules/chaperone-pks " name="chaperone-pks" groups="modules,chaperone" remote="gitlaborg">
     <copyfile src="library/get_nsx_manager_ca_cert.py" dest="ansible/library/get_nsx_manager_ca_cert.py" />
     <copyfile src="library/get_nsx_manager_ids.py" dest="ansible/library/get_nsx_manager_ids.py" />
     <copyfile src="library/ops_manager_configure_auth.py" dest="ansible/library/ops_manager_configure_auth.py" />
