@@ -8,9 +8,6 @@
   <remote  name="privateorg"
            fetch="https://github.com/VuppalaJagadeesh"
            review="gerrit.eng.vmware.com:8080" />
-  <remote  name="gitlaborg"
-           fetch="https://gitlab.eng.vmware.com/pstools/"
-           review="gerrit.eng.vmware.com:8080"  />
 
   <!-- Defaults for repo -->
   <default remote="vmwareorg"
@@ -21,13 +18,10 @@
            sync-c="true"
            sync-j="4"
            revision="master"/>
-  <default remote="gitlaborg"
-           sync-c="true"
-           sync-j="4"
-           revision="master"/>
+
 
   <!-- user interface (django webapp) -->
-  <project path="ui" name="chaperone-ui" groups="chaperone" remote="vmwareorg"/>
+  <project path="ui" name="chaperone-ui" groups="chaperone" remote="privateorg"/>
 
   <!-- playbooks -->
   <project path="ansible/playbooks" name="ansible-playbooks-chaperone" groups="playbooks,sdlc,chaperone" remote="vmwareorg"/>
@@ -38,13 +32,19 @@
     <copyfile src="library/nsxt_deploy_ova.py" dest="ansible/library/nsxt_deploy_ova.py" />
     <copyfile src="library/nsxt_manager_status.py" dest="ansible/library/nsxt_manager_status.py" />
     <copyfile src="library/nsxt_fabric_compute_managers.py" dest="ansible/library/nsxt_fabric_compute_managers.py" />
+    <copyfile src="library/nsxt_vcenter_moids.py" dest="ansible/library/nsxt_vcenter_moids.py" />
+    <copyfile src="library/nsxt_controller_details.py" dest="ansible/library/nsxt_controller_details.py" />
     <copyfile src="library/nsxt_controllers.py" dest="ansible/library/nsxt_controllers.py" />
+    <copyfile src="library/nsxt_edge_details.py" dest="ansible/library/nsxt_edge_details.py" />
+    <copyfile src="library/nsxt_fabric_details.py" dest="ansible/library/nsxt_fabric_details.py" />
     <copyfile src="library/nsxt_fabric_nodes.py" dest="ansible/library/nsxt_fabric_nodes.py" />
     <copyfile src="library/nsxt_fabric_nodes_facts.py" dest="ansible/library/nsxt_fabric_nodes_facts.py" />
     <copyfile src="library/nsxt_ip_blocks.py" dest="ansible/library/nsxt_ip_blocks.py" />
     <copyfile src="library/nsxt_ip_pools.py" dest="ansible/library/nsxt_ip_pools.py" />
     <copyfile src="library/nsxt_transport_zones.py" dest="ansible/library/nsxt_transport_zones.py" />
     <copyfile src="library/nsxt_uplink_profiles.py" dest="ansible/library/nsxt_uplink_profiles.py" />
+    <copyfile src="library/nsxt_transport_node_details.py" dest="ansible/library/nsxt_transport_node_details.py" />
+    <copyfile src="library/nsxt_nsxt_transport_node_edge_details.py" dest="ansible/library/nsxt_transport_node_edge_details.py" />
     <copyfile src="library/nsxt_transport_nodes.py" dest="ansible/library/nsxt_transport_nodes.py" />
     <copyfile src="library/nsxt_edge_profile_id.py" dest="ansible/library/nsxt_edge_profile_id.py" />
     <copyfile src="library/nsxt_edge_clusters.py" dest="ansible/library/nsxt_edge_clusters.py" />
@@ -54,22 +54,12 @@
     <copyfile src="library/nsxt_logical_router_ports.py" dest="ansible/library/nsxt_logical_router_ports.py" />
     <copyfile src="library/nsxt_logical_router_static_routes.py" dest="ansible/library/nsxt_logical_router_static_routes.py" />
     <copyfile src="library/nsxt_nat_rules.py" dest="ansible/library/nsxt_nat_rules.py" />
+    <copyfile src="library/nsxt_selfsigned.py" dest="ansible/library/nsxt_selfsigned.py" />
+    <copyfile src="library/nsxt_superuser.py" dest="ansible/library/nsxt_superuser.py" />
+    <copyfile src="library/nsxt_route_advertisement.py" dest="ansible/library/nsxt_route_advertisement.py" />
 
   </project>
-  
-  <project path="ansible/modules/chaperone-pks " name="chaperone-pks" groups="modules,chaperone" remote="gitlaborg">
-    <copyfile src="library/get_nsx_manager_ca_cert.py" dest="ansible/library/get_nsx_manager_ca_cert.py" />
-    <copyfile src="library/get_nsx_manager_ids.py" dest="ansible/library/get_nsx_manager_ids.py" />
-    <copyfile src="library/ops_manager_configure_auth.py" dest="ansible/library/ops_manager_configure_auth.py" />
-    <copyfile src="library/ops_manager_configure_bosh.py" dest="ansible/library/ops_manager_configure_bosh.py" />
-    <copyfile src="library/ops_manager_deploy_ova.py" dest="ansible/library/ops_manager_deploy_ova.py" />
-    <copyfile src="library/ops_manager_deploy_pks.py" dest="ansible/library/ops_manager_deploy_pks.py" />
-    <copyfile src="library/ops_manager_generate_rsa.py" dest="ansible/library/ops_manager_generate_rsa.py" />
-    <copyfile src="library/ops_manager_nsxt_precheck_errand.py" dest="ansible/library/ops_manager_nsxt_precheck_errand.py" />
-    <copyfile src="library/ops_manager_stage_pks.py" dest="ansible/library/ops_manager_stage_pks.py" />
-    <copyfile src="library/ops_manager_upload_pks_stemcell.py" dest="ansible/library/ops_manager_upload_pks_stemcell.py" />
 
-  </project>
   <project path="ansible/modules/extras-gpl3" name="ansible-modules-extras-gpl3" groups="modules,chaperone" remote="vmwareorg">
     <copyfile src="vds.py" dest="ansible/library/vds.py" />
     <copyfile src="vcenter_portgroup.py" dest="ansible/library/vcenter_portgroup.py" />
